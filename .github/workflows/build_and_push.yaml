@@ -28,7 +28,7 @@ jobs:
 
       - name: Build execution environment image
         run: |
-          uv run ansible-builder build --container_runtime=docker
+          uv run ansible-builder build --container-runtime=docker
 
       - name: Show images
         run: |
