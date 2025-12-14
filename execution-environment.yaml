@@ -1,5 +1,7 @@
 version: 3
 
+container_runtime: docker
+
 images:
   base_image:
     name: "docker.io/redhat/ubi9:latest"
