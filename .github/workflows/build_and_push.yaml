@@ -28,7 +28,7 @@ jobs:
 
       - name: Build execution environment image
         run: |
-          uv run ansible-builder
+          uv run ansible-builder build
 
       - name: Show images
         run: |
