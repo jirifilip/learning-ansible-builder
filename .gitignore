@@ -214,3 +214,6 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# ansible-builder helper files (Dockerfiles, binaries, etc.)
+context

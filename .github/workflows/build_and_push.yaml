@@ -1,0 +1,35 @@
+name: Build and push Ansible execution environment
+
+on:
+  push:
+    branches:
+      - master
+
+
+concurrency:
+  cancel-in-progress: true
+  group: ${{ github.workflow }}-${{ github.ref }}
+
+
+jobs:
+  build-and-push:
+    name: Build and push
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup uv
+        uses: astral-sh/setup-uv@v7
+
+      - name: Install uv project
+        run: |
+          uv sync
+
+      - name: Build execution environment image
+        run: |
+          uv run ansible-builder
+
+      - name: Show images
+        run: |
+          docker image ls
