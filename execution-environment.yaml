@@ -1,0 +1,23 @@
+version: 3
+
+images:
+  base_image:
+    name: "ubuntu:noble"
+
+dependencies:
+  ansible_core:
+    package_pip: ansible-core
+
+  ansible_runner:
+    package_pip: ansible-runner
+
+  python:
+    - boto3
+    - botocore
+
+  galaxy: requirements.yaml
+
+
+additional_build_files:
+  - src: files/root.crt
+    dest: certificates
