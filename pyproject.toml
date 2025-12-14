@@ -1,0 +1,7 @@
+[project]
+name = "learn-ansible-builder"
+version = "0.1.0"
+requires-python = ">=3.13"
+dependencies = [
+    "ansible-builder>=3.1.1",
+]
