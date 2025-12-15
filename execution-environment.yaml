@@ -15,6 +15,9 @@ dependencies:
     - boto3
     - botocore
 
+  system:
+    - openssh-clients
+
   galaxy: requirements.yaml
 
 
