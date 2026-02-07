@@ -3,3 +3,4 @@ collections:
   - name: community.libvirt
   - name: containers.podman
   - name: ansible.posix
+  - name: nvidia.nvidia_driver
